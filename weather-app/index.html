@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container for the entire app -->
+    <div class="container">
+        <!-- Header section with title -->
+        <div class="header">
+            <h1>🌤️ Weather Forecast</h1>
+            <p class="subtitle">Get weather updates for any city</p>
+        </div>
+
+        <!-- Search section -->
+        <div class="search-section">
+            <div class="search-wrapper">
+                <!-- Input field for city name -->
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    class="search-input" 
+                    placeholder="Enter city name..." 
+                    autocomplete="off"
+                />
+                <!-- Search button -->
+                <button id="searchBtn" class="search-btn">Search</button>
+            </div>
+            <!-- Error message display -->
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+
+        <!-- Loading spinner (hidden by default) -->
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <div class="spinner"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Current weather card -->
+        <div id="currentWeather" class="current-weather hidden">
+            <div class="weather-header">
+                <div class="location-info">
+                    <h2 id="cityName" class="city-name"></h2>
+                    <p id="dateTime" class="date-time"></p>
+                </div>
+                <!-- Weather icon -->
+                <img id="weatherIcon" class="weather-icon" alt="weather icon"/>
+            </div>
+
+            <div class="weather-details">
+                <!-- Current temperature -->
+                <div class="temp-section">
+                    <span id="temperature" class="temperature"></span>
+                    <span id="weatherDescription" class="weather-description"></span>
+                </div>
+
+                <!-- Additional weather information -->
+                <div class="weather-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Feels Like</span>
+                        <span id="feelsLike" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Humidity</span>
+                        <span id="humidity" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Wind Speed</span>
+                        <span id="windSpeed" class="info-value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Pressure</span>
+                        <span id="pressure" class="info-value"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div id="forecastSection" class="forecast-section hidden">
+            <h3 class="forecast-title">5-Day Forecast</h3>
+            <!-- Forecast cards will be populated by JavaScript -->
+            <div id="forecastContainer" class="forecast-container"></div>
+        </div>
+    </div>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
