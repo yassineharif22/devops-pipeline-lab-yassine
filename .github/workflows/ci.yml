@@ -1,0 +1,25 @@
+name: CI
+
+on:
+    push:
+        branches: [ main, develop ]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        
+        steps:
+            - uses: actions/checkout@v3
+            
+            - name: Setup environment
+                run: |
+                    echo "Setting up environment..."
+                    
+            - name: Build project
+                run: |
+                    echo "Building project..."
+                    # Replace with your build commands
+                    # Examples:
+                    # npm install && npm run build
+                    # dotnet build
+                    # mvn clean package
