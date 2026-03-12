@@ -19,7 +19,7 @@
  * 5. Go to your API keys section
  * 6. Copy the API key and replace 'YOUR_API_KEY' below
  */
-const API_KEY = 'YOUR_API_KEY';
+const API_KEY = 'd13c4e2767d489e45f8a72e7710ed4d7';
 
 // API endpoint for 5-day forecast
 const API_URL = 'https://api.openweathermap.org/data/2.5/forecast';
